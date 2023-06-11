@@ -1,0 +1,19 @@
+.cuadro-mediano {
+    width: 300px;
+    height: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-left: 800px;
+    margin-top: 50px;
+  }
+  
+  .cuadro-mediano h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cuadro-mediano p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

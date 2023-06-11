@@ -16,7 +16,7 @@ function open_close_menu(){
 
 }
 
-//si el ancho de la pagina es menor a 760px, osultara el menu al recargar la pagina
+//si el ancho de la pagina es menor a 760px, ocultara el menu al recargar la pagina
 
 if(window.innerWidth < 760){
 
@@ -58,7 +58,7 @@ function navigateTo(page) {
         break;
       case 'Clientes':
         frame.src = 'clientes.html';
-        break;
+        break;  
       default:
         frame.src = 'dashboard.html';
     }
