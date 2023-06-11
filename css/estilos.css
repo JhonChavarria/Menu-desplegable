@@ -29,6 +29,7 @@ header {
     position: fixed; /*para que no se oculte*/
     top: 0;
     z-index: 200; /*para que se mantenga encima de todos los elementos*/
+  
 }
 
 .icon__menu{ /*para mantener el margen y volver alinear el icono*/
@@ -38,6 +39,7 @@ header {
     justify-content: center;
     align-items: center;
     transform: translateX(10px); /*para que se mueva un poco para la derecha*/
+    
     
     /*para mantener el espaciado entre el menu desplegable*/
 }
