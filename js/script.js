@@ -58,7 +58,7 @@ function navigateTo(page) {
         break;
       case 'Clientes':
         frame.src = 'clientes.html';
-        break;  
+        break;
       default:
         frame.src = 'dashboard.html';
     }
