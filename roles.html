@@ -151,7 +151,7 @@
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Usuario</h1>
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Rol</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -338,56 +338,58 @@
                             text-align: center;
                         }
                         
+                  </style>
 
-                        </style>
-                         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Rol</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form action="#">
-                                            <div class="nombreUsua">
-                                                <div class="input-box">
-                                                    <span class="details">Nombre de Rol</span><br>
-                                                    <input type="text" id="nombre" placeholder="Ingrese nombre del rol" required>
-                                                </div>
-                                                <div class="input-box">
-                                                    <span class="details">Email</span><br>
-                                                    <ul>
-                                                        <li>Usuarios<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                        <li>Roles<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                        <li>Clientes<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                        <li>Repuestos<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                        <li>Servicios<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                        <li>Mecánicos<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                        <li>Compras<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                        <li>Ventas<i class="fa-solid fa-toggle-large-on"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="input-box">
-                                                    <span class="details">Estado</span><br>
-                                                    <select id="rol" class="form-select" aria-label="Default select example">
-                                                        <option selected>Seleccione un Estado</option>
-                                                        <option value="1">Activo</option>
-                                                        <option value="2">Inactivo</option>
-                                                      </select>
-                                                </div>
-                                            </div>
-                                            <br>
-                                        </form>
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Rol</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <form action="#">
+                                    <div class="nombreUsua">
+                                        <div class="input-box">
+                                            <span class="details">Nombre de Rol</span><br>
+                                            <input type="text" id="nombre" placeholder="Ingrese nombre del rol" required>
+                                        </div>
+                                        <div class="input-box">
+                                            <span class="details">Estado</span><br>
+                                            <select id="rol" class="form-select" aria-label="Default select example">
+                                                <option selected>Seleccione un Estado</option>
+                                                <option value="1">Activo</option>
+                                                <option value="2">Inactivo</option>
+                                              </select>
+                                        </div>
+                                        <div class="input-box">
+                                            <span class="details" >Permisos</span>
+                                            <ul class="permisos">
+                                                <li>Usuarios <i class="fas fa-toggle-on"></i></li>
+                                                <li>Roles <i class="fas fa-toggle-on"></i></li>
+                                                <li>Clientes <i class="fas fa-toggle-on"></i></li>
+                                                <li>Repuestos <i class="fas fa-toggle-on"></i></li>
+                                                <li>Servicios <i class="fas fa-toggle-on"></i></li>
+                                                <li>Mecánicos <i class="fas fa-toggle-on"></i></li>
+                                                <li>Compras <i class="fas fa-toggle-on"></i></li>
+                                                <li>Ventas <i class="fas fa-toggle-on"></i></li>
+                                            </ul>
+                                            
+                                        </div>
+
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-dark"  onclick="">Guardar</button>
-                                    <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal" onclick="">Cancelar</button>
-                                </div>
-                              </div>
+                                    <br>
+                                </form>
                             </div>
-                          </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark"  onclick="">Guardar</button>
+                            <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal" onclick="">Cancelar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </tbody>
                 </table>
 
