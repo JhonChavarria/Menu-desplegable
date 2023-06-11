@@ -59,6 +59,8 @@ function navigateTo(page) {
       case 'Clientes':
         frame.src = 'clientes.html';
         break;
+      case 'Repuestos': 
+      frame.src = 'repuestos.hmtl'
       default:
         frame.src = 'dashboard.html';
     }
