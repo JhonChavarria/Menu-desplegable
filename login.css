@@ -145,3 +145,8 @@ button{
         width: 80%;
     }
 }
+
+#ingreso{
+    text-decoration: none;
+    color: white;
+}
