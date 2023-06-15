@@ -132,7 +132,10 @@
 
                     #estado{
                         
-                        margin-left: 45px;
+                        margin-left: 50px;
+                    }
+                    #estadoSpan{
+                        margin-left: 0px;
                     }
                 </style>
 
@@ -141,7 +144,7 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Repuesto</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Mecánico</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -170,7 +173,7 @@
                                                     required>
                                             </div>
                                             <div class="input-box" id="estado">
-                                                <span class="details">Estado</span><br>
+                                                <span class="details" id="estadoSpan">Estado</span><br>
                                                 <select id="rol" class="form-select"
                                                 aria-label="Default select example">
                                                 <option value="1">Activo</option>
@@ -253,7 +256,7 @@
                                                                     placeholder="Ingrese su dirección" required>
                                                             </div>
                                                             <div class="input-box">
-                                                                <span class="details">telefono</span><br>
+                                                                <span class="details">teléfono</span><br>
                                                                 <input id="telefono" type="text"
                                                                     placeholder="Ingrese el telefono" required>
                                                             </div>

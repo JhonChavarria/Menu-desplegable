@@ -36,7 +36,7 @@
                             class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                             <path
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
-                        </svg> Agregar  Repuesto</a></div>
+                        </svg> Agregar Repuesto</a></div>
                 <style>
                     .container {
                         max-width: 700px;
@@ -130,9 +130,19 @@
                         align-items: center;
                     }
 
-                    #estado{
-                        
+                    #estado {
+
                         margin-left: 45px;
+                    }
+
+                    #estado2 {
+                        margin-left: 50px;
+                    }
+                    #estadoSpan{
+                        margin-left: 10px;
+                    }
+                    #estadoSpan2{
+                        margin-left: 0px;
                     }
                 </style>
 
@@ -151,8 +161,7 @@
                                         <div class="nombreUsua">
                                             <div class="input-box">
                                                 <span class="details">Nombre</span><br>
-                                                <input type="text" id="nombre" placeholder="Ingrese el nombre"
-                                                    required>
+                                                <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
                                             </div>
                                             <div class="input-box">
                                                 <span class="details">Precio</span><br>
@@ -174,12 +183,12 @@
                                                 </select>
                                             </div>
                                             <div class="input-box" id="estado">
-                                                <span class="details">Estado</span><br>
+                                                <span class="details" id="estadoSpan2">Estado</span><br>
                                                 <select id="rol" class="form-select"
-                                                aria-label="Default select example">
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                            </select>
+                                                    aria-label="Default select example">
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                </select>
                                             </div>
 
 
@@ -234,7 +243,7 @@
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Cliente</h1>
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Repuesto</h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
@@ -248,27 +257,32 @@
                                                                     placeholder="Ingrese su nombre completo" required>
                                                             </div>
                                                             <div class="input-box">
-                                                                <span class="details">Cedula</span><br>
+                                                                <span class="details">Precio</span><br>
                                                                 <input id="cedula" type="number"
-                                                                    placeholder="Ingrese su cedula" required>
+                                                                    placeholder="Ingrese el precio" required>
                                                             </div>
                                                             <div class="input-box">
-                                                                <span class="details">Dirección</span><br>
+                                                                <span class="details">Cantidad</span><br>
                                                                 <input id="Dirección" type="text"
-                                                                    placeholder="Ingrese su direcciñon" required>
+                                                                    placeholder="Ingrese la cantidad" required>
                                                             </div>
                                                             <div class="input-box">
-                                                                <span class="details">Email</span><br>
-                                                                <input id="email" type="text"
-                                                                    placeholder="Ingrese su email" required>
+                                                                <span class="details">Categoría</span><br>
+                                                                <select id="rol" class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option value="1">Frenos</option>
+                                                                    <option value="2">Llantas</option>
+                                                                    <option value="2">Bujías</option>
+                                                                </select>
                                                             </div>
-                                                            <div class="input-box">
-                                                                <span class="details">Telefono</span><br>
-                                                                <input id="telefono" type="number"
-                                                                    placeholder="Ingresa tu numero de telefono"
-                                                                    required>
+                                                            <div class="input-box" id="estado2">
+                                                                <span class="details" >Estado</span><br>
+                                                                <select id="rol" class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option value="1">Activo</option>
+                                                                    <option value="2">Inactivo</option>
+                                                                </select>
                                                             </div>
-
 
                                                         </div>
                                                         <br>
