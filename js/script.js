@@ -75,3 +75,4 @@ function navigateTo(page) {
       frame.src = 'dashboard.html';
   }
 }
+

@@ -14,6 +14,7 @@
 
     <script src="https://kit.fontawesome.com/51aee0fcba.js" crossorigin="anonymous"></script>
     
+    <script src= "clientes.js"></script>
     
 </head>
 <body>
@@ -141,11 +142,11 @@
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Cedula</span><br>
-                                            <input id="cedula" type="number" placeholder="Ingrese su cedula" required>
+                                            <input id="cedula" type="text" placeholder="Ingrese su cedula" required>
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Dirección</span><br>
-                                            <input id="Dirección" type="text" placeholder="Ingrese su direcciñon" required>
+                                            <input id="direccion" type="text" placeholder="Ingrese su direcciñon" required>
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Email</span><br>
@@ -153,7 +154,7 @@
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Telefono</span><br>
-                                            <input id="telefono" type="number" placeholder="Ingresa tu numero de telefono" required>
+                                            <input id="telefono" type="text" placeholder="Ingresa tu numero de telefono" required>
                                         </div>
                         
                                         
@@ -163,7 +164,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-dark"  onclick="">Agregar</button>
+                            <input type="submit" value="Agregar"  class="btn btn-outline-dark" onclick="Agregar() "/>
                             <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal" onclick="">Cancelar</button>
                         </div>
                       </div>
@@ -214,23 +215,23 @@
                                             <div class="nombreUsua">
                                                 <div class="input-box">
                                                     <span class="details">Nombre</span><br>
-                                                    <input type="text" id="nombre" placeholder="Ingrese su nombre completo" required>
+                                                    <input type="text" id="nombreE" placeholder="Ingrese su nombre completo" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Cedula</span><br>
-                                                    <input id="cedula" type="number" placeholder="Ingrese su cedula" required>
+                                                    <input id="cedulaE" type="number" placeholder="Ingrese su cedula" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Dirección</span><br>
-                                                    <input id="Dirección" type="text" placeholder="Ingrese su direcciñon" required>
+                                                    <input id="DirecciónE" type="text" placeholder="Ingrese su direcciñon" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Email</span><br>
-                                                    <input id="email" type="text" placeholder="Ingrese su email" required>
+                                                    <input id="emailE" type="text" placeholder="Ingrese su email" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Telefono</span><br>
-                                                    <input id="telefono" type="number" placeholder="Ingresa tu numero de telefono" required>
+                                                    <input id="telefonoE" type="number" placeholder="Ingresa tu numero de telefono" required>
                                                 </div>
                                 
                                                 
