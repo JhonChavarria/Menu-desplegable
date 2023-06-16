@@ -134,7 +134,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="container">
-                                <form action="#">
+                                <form id="formulario" action="#">
                                     <div class="nombreUsua">
                                         <div class="input-box">
                                             <span class="details">Nombre</span><br>
@@ -146,7 +146,7 @@
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Dirección</span><br>
-                                            <input id="direccion" type="text" placeholder="Ingrese su direcciñon" required>
+                                            <input id="direccion" type="text" placeholder="Ingrese su direccion" required>
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Email</span><br>
@@ -165,7 +165,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="submit" value="Agregar"  class="btn btn-outline-dark" onclick="Agregar() "/>
-                            <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal" onclick="">Cancelar</button>
+                            <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal" onclick="cancelar()">Cancelar</button>
                         </div>
                       </div>
                     </div>
@@ -215,23 +215,23 @@
                                             <div class="nombreUsua">
                                                 <div class="input-box">
                                                     <span class="details">Nombre</span><br>
-                                                    <input type="text" id="nombreE" placeholder="Ingrese su nombre completo" required>
+                                                    <input type="text" id="nombre" placeholder="Ingrese su nombre completo" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Cedula</span><br>
-                                                    <input id="cedulaE" type="number" placeholder="Ingrese su cedula" required>
+                                                    <input id="cedula" type="text" placeholder="Ingrese su cedula" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Dirección</span><br>
-                                                    <input id="DirecciónE" type="text" placeholder="Ingrese su direcciñon" required>
+                                                    <input id="direccion" type="text" placeholder="Ingrese su dirección" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Email</span><br>
-                                                    <input id="emailE" type="text" placeholder="Ingrese su email" required>
+                                                    <input id="email" type="text" placeholder="Ingrese su email" required>
                                                 </div>
                                                 <div class="input-box">
                                                     <span class="details">Telefono</span><br>
-                                                    <input id="telefonoE" type="number" placeholder="Ingresa tu numero de telefono" required>
+                                                    <input id="telefono" type="text" placeholder="Ingresa tu numero de telefono" required>
                                                 </div>
                                 
                                                 
@@ -241,8 +241,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-dark"  onclick="">Guardar</button>
-                                    <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal" onclick="">Cancelar</button>
+                                    <button type="button" class="btn btn-outline-dark"  onclick="guardar()">Guardar</button>
+                                    <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal" onclick="" id="modalcancelar">Cancelar</button>
                                 </div>
                               </div>
                             </div>
@@ -294,6 +294,6 @@
         </section>
     </div>    
     
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
