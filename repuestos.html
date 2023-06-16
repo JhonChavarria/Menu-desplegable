@@ -167,7 +167,7 @@
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Precio</span><br>
-                                            <input id="precio" type="number" placeholder="Ingrese el precio" required>
+                                            <input id="precio" type="text" placeholder="Ingrese el precio" required>
                                         </div>
                                         <div class="input-box">
                                             <span class="details">Cantidad</span><br>
@@ -224,10 +224,18 @@
 
                             <td><a href="#" class="Editar" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="fa-solid fa-pen-to-square"></i></a>
+                                        
                                 <style>
                                     .Editar {
                                         text-decoration: none;
                                         color: #000;
+                                    }
+                                    .buttonEstado{
+                                        color: green;
+                                        cursor: pointer;
+                                    }
+                                    #buttonEstado:active{
+                                        color: red;
                                     }
                                 </style>
                                 <div class="modal fade" id="exampleModal2" tabindex="-1"
@@ -284,7 +292,11 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><i class="fa-solid fa-power-off"></i></td>
+
+                            <!-- BOTON DE ESTADO -->
+
+                            <td><i class="fa-solid fa-power-off buttonEstado"></i></td>
+                            
                             <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M7 6a7.75 7.75 0 1 0 10 0"></path>

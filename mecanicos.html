@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
+    <title>Mecánicos</title>
     <link rel="stylesheet" href="css/usuarios.css">
 
 
@@ -129,14 +129,6 @@
                     .modar-header {
                         align-items: center;
                     }
-
-                    #estado{
-                        
-                        margin-left: 50px;
-                    }
-                    #estadoSpan{
-                        margin-left: 0px;
-                    }
                 </style>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -150,7 +142,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="container">
-                                    <form action="#">
+                                    <form id="formulario" action="#">
                                         <div class="nombreUsua">
                                             <div class="input-box">
                                                 <span class="details">Nombre</span><br>
@@ -158,27 +150,22 @@
                                                     required>
                                             </div>
                                             <div class="input-box">
-                                                <span class="details">Cédula</span><br>
-                                                <input id="cedula" type="text" placeholder="Ingrese su cédula"
-                                                    required>
+                                                <span class="details">Cedula</span><br>
+                                                <input id="cedula" type="text" placeholder="Ingrese su cedula" required>
                                             </div>
                                             <div class="input-box">
                                                 <span class="details">Dirección</span><br>
-                                                <input id="Dirección" type="text" placeholder="Ingrese su dirección"
+                                                <input id="direccion" type="text" placeholder="Ingrese su direccion"
                                                     required>
                                             </div>
                                             <div class="input-box">
-                                                <span class="details">Teléfono </span><br>
-                                                <input id="Dirección" type="text" placeholder="Ingrese su dirección"
-                                                    required>
+                                                <span class="details">Email</span><br>
+                                                <input id="email" type="text" placeholder="Ingrese su email" required>
                                             </div>
-                                            <div class="input-box" id="estado">
-                                                <span class="details" id="estadoSpan">Estado</span><br>
-                                                <select id="rol" class="form-select"
-                                                aria-label="Default select example">
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                            </select>
+                                            <div class="input-box">
+                                                <span class="details">Telefono</span><br>
+                                                <input id="telefono" type="text"
+                                                    placeholder="Ingresa tu numero de telefono" required>
                                             </div>
 
 
@@ -188,9 +175,10 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark" onclick="">Agregar</button>
+                                <input type="submit" value="Agregar" class="btn btn-outline-dark"
+                                    onclick="validar1() " />
                                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
-                                    onclick="">Cancelar</button>
+                                    onclick="cancelar()">Cancelar</button>
                             </div>
                         </div>
                     </div>
@@ -203,9 +191,10 @@
                         <tr class="tr">
                             <th scope="col">Id</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Cédula</th>
+                            <th scope="col">Cedula</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Dirección</th>
-                            <th scope="col">Teléfono</th>
+                            <th scope="col">Telefono</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Estado</th>
                         </tr>
@@ -213,12 +202,11 @@
                     <tbody id="user-list">
                         <tr>
                             <td>01</td>
-                            <td>Juan Perez</td>
-                            <td>10896753229</td>
-                            <td>Calle A con B </td>
-                            <td>3107862130</td>
-
-
+                            <td>sara Arias</td>
+                            <td>1000234576</td>
+                            <td>Saritalop@gmail.com</td>
+                            <td>Cr34 #43-54</td>
+                            <td>3148732945</td>
                             <td><a href="#" class="Editar" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="fa-solid fa-pen-to-square"></i></a>
                                 <style>
@@ -232,43 +220,40 @@
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Cliente</h1>
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Mecánico</h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container">
-                                                    <form action="#">
+                                                    <form action="#" id="formulario2">
                                                         <div class="nombreUsua">
                                                             <div class="input-box">
                                                                 <span class="details">Nombre</span><br>
-                                                                <input type="text" id="nombre"
-                                                                    placeholder="Ingrese el nombre completo" required>
+                                                                <input type="text" id="nombre2"
+                                                                    placeholder="Ingrese su nombre completo" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Cedula</span><br>
-                                                                <input id="cedula" type="text"
-                                                                    placeholder="Ingrese su cédula" required>
+                                                                <input id="cedula2" type="text"
+                                                                    placeholder="Ingrese su cedula" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Dirección</span><br>
-                                                                <input id="Dirección" type="text"
+                                                                <input id="direccion2" type="text"
                                                                     placeholder="Ingrese su dirección" required>
                                                             </div>
                                                             <div class="input-box">
-                                                                <span class="details">teléfono</span><br>
-                                                                <input id="telefono" type="text"
-                                                                    placeholder="Ingrese el telefono" required>
+                                                                <span class="details">Email</span><br>
+                                                                <input id="email2" type="text"
+                                                                    placeholder="Ingrese su email" required>
                                                             </div>
-                                                            <div class="input-box" id="estado">
-                                                                <span class="details" id="estadoSpan">Estado</span><br>
-                                                                <div class="input-box">
-                                                                    <select id="rol" class="form-select"
-                                                                        aria-label="Default select example">
-                                                                        <option value="1">Activo</option>
-                                                                        <option value="2">Inactivo</option>
-                                                                    </select>
-                                                                </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Telefono</span><br>
+                                                                <input id="telefono2" type="text"
+                                                                    placeholder="Ingresa tu numero de telefono"
+                                                                    required>
+                                                            </div>
 
 
                                                         </div>
@@ -278,9 +263,10 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-outline-dark"
-                                                    onclick="">Guardar</button>
+                                                    onclick="validar2()">Guardar</button>
                                                 <button type="button" class="btn btn-outline-dark"
-                                                    data-bs-dismiss="modal" onclick="">Cancelar</button>
+                                                    data-bs-dismiss="modal" onclick="" id="modalcancelar"
+                                                    ondblclick="limpiar()">Cancelar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -331,8 +317,9 @@
 
         </section>
     </div>
+    <script src="validarMecanicos.js"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

@@ -159,34 +159,33 @@
                             </div>
                             <div class="modal-body">
                                 <div class="container">
-                                    <form action="#">
-                                        <div class="nombreUsua">
-                                            <div class="input-box">
-                                                <span class="details">Nombre</span><br>
-                                                <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
-                                            </div>
-                                            <div class="input-box">
-                                                <span class="details">Descripción</span><br>
-                                                <input id="cedula" type="text" placeholder="Ingrese la descripción"
-                                                    required>
-                                            </div>
-                                            <div class="input-box" id="estado">
-                                                <span class="details" id="estadoAdd">Estado</span><br>
-                                                <select id="rol" class="form-select"
-                                                    aria-label="Default select example">
-                                                    <option value="1">Activo</option>
-                                                    <option value="2">Inactivo</option>
-                                                </select>
-                                            </div>
 
-
+                                    <div class="nombreUsua">
+                                        <div class="input-box">
+                                            <span class="details">Nombre</span><br>
+                                            <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
                                         </div>
-                                        <br>
-                                    </form>
+                                        <div class="input-box">
+                                            <span class="details">Descripción</span><br>
+                                            <input id="descripcion" type="text" placeholder="Ingrese la descripción"
+                                                required>
+                                        </div>
+                                        <div class="input-box" id="estado">
+                                            <span class="details" id="estadoAdd">Estado</span><br>
+                                            <select id="rol" class="form-select" aria-label="Default select example">
+                                                <option value="1">Activo</option>
+                                                <option value="2">Inactivo</option>
+                                            </select>
+                                        </div>
+
+
+                                    </div>
+                                    <br>
+
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark" onclick="">Agregar</button>
+                                <button type="submit" class="btn btn-outline-dark" onclick="validar1()">Agregar</button>
                                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
                                     onclick="">Cancelar</button>
                             </div>
@@ -234,41 +233,41 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container">
-                                                    <form action="#">
-                                                        <div class="nombreUsua">
-                                                            <div class="input-box">
-                                                                <span class="details">Nombre</span><br>
-                                                                <input type="text" id="nombre"
-                                                                    placeholder="Ingrese el nombre" required>
-                                                            </div>
-                                                            <div class="input-box">
-                                                                <span class="details">Descripción</span><br>
-                                                                <input id="cedula" type="text"
-                                                                    placeholder="Ingrese la descripción" required>
-                                                            </div>
-                                                            <div class="input-box" id="estado">
-                                                                <span class="details" id="estadoSpan">Estado</span><br>
-                                                                <div class="input-box">
-                                                                    <select id="rol" class="form-select"
-                                                                        aria-label="Default select example">
-                                                                        <option value="1">Activo</option>
-                                                                        <option value="2">Inactivo</option>
-                                                                    </select>
-                                                                </div>
 
-
-
-                                                            </div>
+                                                    <div class="nombreUsua">
+                                                        <div class="input-box">
+                                                            <span class="details">Nombre</span><br>
+                                                            <input type="text" id="nombre2"
+                                                                placeholder="Ingrese el nombre" required>
                                                         </div>
-                                                        <br>
-                                                    </form>
+                                                        <div class="input-box">
+                                                            <span class="details">Descripción</span><br>
+                                                            <input id="descripcion2" type="text"
+                                                                placeholder="Ingrese la descripción" required>
+                                                        </div>
+                                                        <div class="input-box" id="estado">
+                                                            <span class="details" id="estadoSpan">Estado</span><br>
+                                                            <div class="input-box">
+                                                                <select id="rol" class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option value="1">Activo</option>
+                                                                    <option value="2">Inactivo</option>
+                                                                </select>
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                    <br>
+
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
+                                                <button type="submit" class="btn btn-outline-dark"
+                                                    onclick="validar2()">Guardar</button>
                                                 <button type="button" class="btn btn-outline-dark"
-                                                    onclick="">Guardar</button>
-                                                <button type="button" class="btn btn-outline-dark"
-                                                    data-bs-dismiss="modal" onclick="">Cancelar</button>
+                                                    data-bs-dismiss="modal" onclick="limpiar()">Cancelar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -320,7 +319,8 @@
         </section>
     </div>
 
-
+    <script src="validarServicios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
