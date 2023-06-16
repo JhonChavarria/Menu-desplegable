@@ -13,7 +13,7 @@ form.addEventListener("submit", e => {
 
 
 
-    if (email.value == "" && pass.value == "") {
+    if (email.value == "" || pass.value == "") {
         // alert("LLenar los campos")
         Swal.fire({
             icon: 'error',

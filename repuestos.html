@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
+    <title>Repuestos</title>
     <link rel="stylesheet" href="css/usuarios.css">
 
 
@@ -138,10 +138,12 @@
                     #estado2 {
                         margin-left: 50px;
                     }
-                    #estadoSpan{
+
+                    #estadoSpan {
                         margin-left: 10px;
                     }
-                    #estadoSpan2{
+
+                    #estadoSpan2 {
                         margin-left: 0px;
                     }
                 </style>
@@ -157,54 +159,44 @@
                             </div>
                             <div class="modal-body">
                                 <div class="container">
-                                    <form action="#">
-                                        <div class="nombreUsua">
-                                            <div class="input-box">
-                                                <span class="details">Nombre</span><br>
-                                                <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
-                                            </div>
-                                            <div class="input-box">
-                                                <span class="details">Precio</span><br>
-                                                <input id="cedula" type="number" placeholder="Ingrese el precio"
-                                                    required>
-                                            </div>
-                                            <div class="input-box">
-                                                <span class="details">Cantidad</span><br>
-                                                <input id="Dirección" type="text" placeholder="Ingrese la cantidad"
-                                                    required>
-                                            </div>
-                                            <div class="input-box">
-                                                <span class="details">Categoría</span><br>
-                                                <select id="rol" class="form-select"
-                                                    aria-label="Default select example">
-                                                    <option value="1">Frenos</option>
-                                                    <option value="2">Llantas</option>
-                                                    <option value="2">Bujías</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-box" id="estado">
-                                                <span class="details" id="estadoSpan2">Estado</span><br>
-                                                <select id="rol" class="form-select"
-                                                    aria-label="Default select example">
-                                                    <option value="1">Activo</option>
-                                                    <option value="2">Inactivo</option>
-                                                </select>
-                                            </div>
 
-
+                                    <div class="nombreUsua">
+                                        <div class="input-box">
+                                            <span class="details">Nombre</span><br>
+                                            <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
                                         </div>
-                                        <br>
-                                    </form>
+                                        <div class="input-box">
+                                            <span class="details">Precio</span><br>
+                                            <input id="precio" type="number" placeholder="Ingrese el precio" required>
+                                        </div>
+                                        <div class="input-box">
+                                            <span class="details">Cantidad</span><br>
+                                            <input id="cantidad" type="text" placeholder="Ingrese la cantidad" required>
+                                        </div>
+                                        <div class="input-box">
+                                            <span class="details">Categoría</span><br>
+                                            <select id="categoria" class="form-select"
+                                                aria-label="Default select example">
+                                                <option value="1">Frenos</option>
+                                                <option value="2">Llantas</option>
+                                                <option value="2">Bujías</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <br>
+
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark" onclick="">Agregar</button>
+                                <button type="submit" class="btn btn-outline-dark" onclick="validar()">Agregar</button>
                                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
                                     onclick="">Cancelar</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <br>
                 <br>
@@ -249,49 +241,42 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container">
-                                                    <form action="#">
+
+                                                    
+
                                                         <div class="nombreUsua">
                                                             <div class="input-box">
                                                                 <span class="details">Nombre</span><br>
-                                                                <input type="text" id="nombre"
+                                                                <input type="text" id="nombre2"
                                                                     placeholder="Ingrese su nombre completo" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Precio</span><br>
-                                                                <input id="cedula" type="number"
+                                                                <input id="precio2" type="text"
                                                                     placeholder="Ingrese el precio" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Cantidad</span><br>
-                                                                <input id="Dirección" type="text"
+                                                                <input id="cantidad2" type="text"
                                                                     placeholder="Ingrese la cantidad" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Categoría</span><br>
-                                                                <select id="rol" class="form-select"
+                                                                <select id="categoria2" class="form-select"
                                                                     aria-label="Default select example">
                                                                     <option value="1">Frenos</option>
                                                                     <option value="2">Llantas</option>
                                                                     <option value="2">Bujías</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="input-box" id="estado2">
-                                                                <span class="details" >Estado</span><br>
-                                                                <select id="rol" class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option value="1">Activo</option>
-                                                                    <option value="2">Inactivo</option>
-                                                                </select>
-                                                            </div>
-
                                                         </div>
                                                         <br>
-                                                    </form>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-dark"
-                                                    onclick="">Guardar</button>
+                                                <button type="submit" class="btn btn-outline-dark"
+                                                    onclick="validar2()">Guardar</button>
                                                 <button type="button" class="btn btn-outline-dark"
                                                     data-bs-dismiss="modal" onclick="">Cancelar</button>
                                             </div>
@@ -345,7 +330,8 @@
         </section>
     </div>
 
-
+    <script src="validarRepuestos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
