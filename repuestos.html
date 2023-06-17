@@ -159,7 +159,9 @@
                             </div>
                             <div class="modal-body">
                                 <div class="container">
-                                    <form action="">
+
+                                    <form action="" id="formulario">
+
                                         <div class="nombreUsua">
                                             <div class="input-box">
                                                 <span class="details">Nombre</span><br>
@@ -167,7 +169,8 @@
                                             </div>
                                             <div class="input-box">
                                                 <span class="details">Precio</span><br>
-                                                <input id="precio" type="text" placeholder="Ingrese el precio" required>
+                                                <input id="precio" type="number" placeholder="Ingrese el precio"
+                                                    required>
                                             </div>
                                             <div class="input-box">
                                                 <span class="details">Cantidad</span><br>
@@ -186,13 +189,15 @@
 
                                         </div>
                                         <br>
+
                                     </form>
                                 </div>
+
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-outline-dark" onclick="validar()">Agregar</button>
+                                <button type="submit" class="btn btn-outline-dark" onclick="validar1()">Agregar</button>
                                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
-                                    onclick="">Cancelar</button>
+                                    onclick="cancelar()">Cancelar</button>
                             </div>
                         </div>
                     </div>
@@ -255,6 +260,9 @@
 
 
 
+                                                    <!-- FORMULARIO 2 -->
+                                                    <form action="" id="formulario">
+
                                                     <div class="nombreUsua">
                                                         <div class="input-box">
                                                             <span class="details">Nombre</span><br>
@@ -283,15 +291,19 @@
                                                     </div>
                                                     <br>
 
+                                            <!--FIN DEL FORMULARIO-->
+                                                </form>
+
+
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="submit" class="btn btn-outline-dark"
                                                     onclick="validar2()">Guardar</button>
                                                 <button type="button" class="btn btn-outline-dark"
-                                                    data-bs-dismiss="modal" onclick="">Cancelar</button>
+                                                    data-bs-dismiss="modal" onclick="cancelar()">Cancelar</button>
                                             </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </td>
