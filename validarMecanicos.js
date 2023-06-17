@@ -58,6 +58,8 @@
 //   }
 // });
 
+
+// VALIDACIÓN DEL PRIMER FORMULARIO DE MECÁNICOS.HTML
 function validar1() {
   const nombre = document.getElementById("nombre").value;
   const cedula = document.getElementById("cedula").value;
@@ -103,7 +105,7 @@ function validar1() {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Email incorrect0",
+      text: "Email incorrecto",
     });
   } else if (!Vtelefono.test(telefono)) {
     Swal.fire({
@@ -129,6 +131,7 @@ function validar1() {
   }
 }
 
+// VALIDACIÓN DEL SEGUNDO FORMULARIO DE MECÁNICOS.HTML
 function validar2() {
   const nombre2 = document.getElementById("nombre2").value;
   const cedula2 = document.getElementById("cedula2").value;
@@ -201,7 +204,7 @@ function validar2() {
 }
 
 
-
+// FUNCIÓN DE LIMPIAR FORMULARIOS
 function cancelar() {
   // Cerrar el formulario aquí
   document.getElementById('formulario').reset();
