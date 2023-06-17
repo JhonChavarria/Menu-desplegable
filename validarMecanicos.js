@@ -62,13 +62,16 @@ function validar1() {
   const nombre = document.getElementById("nombre").value;
   const cedula = document.getElementById("cedula").value;
   const direccion = document.getElementById("direccion").value;
+  const email = document.getElementById("email").value
+  const telefono = document.getElementById("telefono").value
+
 
   var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
   var Vcedula = /^[0-9]+$/; // Expresión regular para validar que la cédula solo contenga números
   var Vdireccion = /^[a-zA-Z0-9\s]+$/;
   //   var Vtelefono = /^\d+$/; // Expresión regular para validar que el teléfono solo contenga números
   var Vtelefono = /^\d{10}$/; // Expresión regular para validar que el teléfono solo contenga dígitos y tenga una longitud de 10
-  var email_val =
+  var Vemail =
     /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
   if (nombre == "" || cedula == "" || direccion == "") {
