@@ -1,23 +1,25 @@
-// VALIDACIÓN DEL PRIMER FORMULARIO DE "SERVICIOS.HTML"
+
+// VALIDACIÓN DEL PRIMER FORMULARIO DE SERVICIOS.HTML
 function validar1() {
-  const nombre = document.getElementById("nombre");
-  const descripcion = document.getElementById("descripcion");
+  const nombre = document.getElementById("nombre").value;
+  const descripcion = document.getElementById("descripcion").value;
 
-  const letters = /^[A-Za-z]+$/;
 
-  if (nombre.value == "" || descripcion.value == "") {
+  var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
+
+  if (nombre == "" || descripcion == "") {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Llenar los campos",
+      text: "Ingrese informacion en los campos vacios",
     });
-  } else if (!letters.test(nombre.value)) {
+  } else if (!Vnombre.test(nombre)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
       text: "Nombre incorrecto",
     });
-  } else if (!letters.test(descripcion.value)) {
+  } else if (!Vnombre.test(descripcion)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -28,30 +30,36 @@ function validar1() {
       icon: "success",
       title: "Excelente",
       text: "¡Servicio Agregado!",
-    });
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = 'servicios.html';
+      }
+    })
   }
+
 }
 
-// VALIDACIÓN DEL SEGUNDO FORMULARIO DE "SERVICIOS.HTML"
+// VALIDACIÓN DEL SEGUNDO FORMULARIO DE SERVICIOS.HTML
 function validar2() {
-  const nombre2 = document.getElementById("nombre2");
-  const descripcion2 = document.getElementById("descripcion2");
+  const nombre2 = document.getElementById("nombre2").value;
+  const descripcion2 = document.getElementById("descripcion2").value;
 
-  const letters = /^[A-Za-z]+$/;
 
-  if (nombre2.value == "" || descripcion2.value == "") {
+  var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
+
+  if (nombre2 == "" || descripcion2 == "") {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Llenar los campos",
+      text: "Ingrese informacion en los campos vacios",
     });
-  } else if (!letters.test(nombre2.value)) {
+  } else if (!Vnombre.test(nombre2)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
       text: "Nombre incorrecto",
     });
-  } else if (!letters.test(descripcion2.value)) {
+  } else if (!Vnombre.test(descripcion2)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -61,7 +69,23 @@ function validar2() {
     Swal.fire({
       icon: "success",
       title: "Excelente",
-      text: "¡Servicio Editado!",
+      text: "¡Servicio editado!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = 'servicios.html';
+      }
     });
   }
+
 }
+  
+
+// FUNCIÓN DE LIMPIAR FORMULARIOS
+function cancelar() {
+  // Cerrar el formulario aquí
+  document.getElementById('formulario').reset();
+  window.location.href = 'servicios.html';
+
+
+}
+

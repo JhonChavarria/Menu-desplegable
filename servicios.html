@@ -160,80 +160,84 @@
                             <div class="modal-body">
                                 <div class="container">
 
-                                    <div class="nombreUsua">
-                                        <div class="input-box">
-                                            <span class="details">Nombre</span><br>
-                                            <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
-                                        </div>
-                                        <div class="input-box">
-                                            <span class="details">Descripción</span><br>
-                                            <input id="descripcion" type="text" placeholder="Ingrese la descripción"
-                                                required>
-                                        </div>
-                                        <div class="input-box" id="estado">
-                                            <span class="details" id="estadoAdd">Estado</span><br>
-                                            <select id="rol" class="form-select" aria-label="Default select example">
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                            </select>
-                                        </div>
+                                    <form action="#" id="formulario">
 
+                                        <div class="nombreUsua">
+                                            <div class="input-box">
+                                                <span class="details">Nombre</span><br>
+                                                <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">Descripción</span><br>
+                                                <input id="descripcion" type="text" placeholder="Ingrese la descripción"
+                                                    required>
+                                            </div>
+                                            <div class="input-box" id="estado">
+                                                <span class="details" id="estadoAdd">Estado</span><br>
+                                                <select id="rol" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                </select>
+                                            </div>
 
-                                    </div>
-                                    <br>
+                                    </form>
 
                                 </div>
+                                <br>
+
                             </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-outline-dark" onclick="validar1()">Agregar</button>
-                                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
-                                    onclick="">Cancelar</button>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-dark" onclick="validar1()">Agregar</button>
+                            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
+                                onclick="cancelar()">Cancelar</button>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <br>
-                <br>
-                <table class="table" id="tableData">
-                    <thead>
-                        <tr class="tr">
-                            <th scope="col">Id</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody id="user-list">
-                        <tr>
-                            <td>01</td>
-                            <td>Cambio de llantas</td>
-                            <td>Lorem ipsum dolor sit amet.</td>
+            <br>
+            <br>
+            <table class="table" id="tableData">
+                <thead>
+                    <tr class="tr">
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                    <tr>
+                        <td>01</td>
+                        <td>Cambio de llantas</td>
+                        <td>Lorem ipsum dolor sit amet.</td>
 
 
 
 
-                            <td><a href="#" class="Editar" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
-                                        class="fa-solid fa-pen-to-square"></i></a>
-                                <style>
-                                    .Editar {
-                                        text-decoration: none;
-                                        color: #000;
-                                    }
-                                </style>
-                                <div class="modal fade" id="exampleModal2" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Cliente</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="container">
-
+                        <td><a href="#" class="Editar" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
+                                    class="fa-solid fa-pen-to-square"></i></a>
+                            <style>
+                                .Editar {
+                                    text-decoration: none;
+                                    color: #000;
+                                }
+                            </style>
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Cliente</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <form action="#" id="formulario">
                                                     <div class="nombreUsua">
                                                         <div class="input-box">
                                                             <span class="details">Nombre</span><br>
@@ -255,31 +259,31 @@
                                                                 </select>
                                                             </div>
 
+                                                </form>
 
-
-                                                        </div>
-                                                    </div>
-                                                    <br>
-
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="submit" class="btn btn-outline-dark"
-                                                    onclick="validar2()">Guardar</button>
-                                                <button type="button" class="btn btn-outline-dark"
-                                                    data-bs-dismiss="modal" onclick="limpiar()">Cancelar</button>
                                             </div>
                                         </div>
+                                        <br>
+
                                     </div>
                                 </div>
-                            </td>
-                            <td><i class="fa-solid fa-power-off"></i></td>
-                            <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-outline-dark"
+                                        onclick="validar2()">Guardar</button>
+                                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
+                                        onclick="cancelar()">Cancelar</button>
+                                </div>
+                            </div>
+    </div>
+    </div>
+    </td>
+    <td><i class="fa-solid fa-power-off"></i></td>
+    <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M7 6a7.75 7.75 0 1 0 10 0"></path>
                         <path d="M12 4l0 8"></path>
                      </svg></i></td> -->
-                            <!-- <td> 
+    <!-- <td> 
                         <a href="#" class="btn btn-danger btn-sm delete" onclick="clearFields()">Delete</a>
                     </td>
                     <td>
@@ -287,36 +291,36 @@
                     </td>
                     
                     </tr> -->
-                    </tbody>
-                </table>
+    </tbody>
+    </table>
 
-            </div>
-            <div class="search">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                </form>
-            </div>
+    </div>
+    <div class="search">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+    </div>
 
-            <nav class="pagination" aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+    <nav class="pagination" aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-        </section>
+    </section>
     </div>
 
     <script src="validarServicios.js"></script>
