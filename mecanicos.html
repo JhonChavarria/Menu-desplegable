@@ -129,6 +129,10 @@
                     .modar-header {
                         align-items: center;
                     }
+                    #IconoEstado{
+                        color: green;
+                        cursor: pointer;
+                    }
                 </style>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -274,7 +278,16 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><i class="fa-solid fa-power-off"></i></td>
+
+
+                            <!-- INCONO DE ESTADO -->
+
+                            <td><i class="fa-solid fa-power-off" id="IconoEstado"></i></td>
+
+
+
+
+
                             <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M7 6a7.75 7.75 0 1 0 10 0"></path>
@@ -321,6 +334,7 @@
     </div>
     
     <script src="validarMecanicos.js"></script>
+    <script src="estadoColor.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
