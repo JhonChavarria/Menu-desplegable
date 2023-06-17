@@ -89,13 +89,29 @@ function validar1() {
       title: "Oops...",
       text: "Cédula incorrecta",
     });
-  } else if (!Vdireccion.test("direccion")) {
+  } else if (!Vdireccion.test(direccion)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
       text: "Direccion incorrecta",
     });
-  } else {
+
+  } else if (!Vemail.test(email)) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Email incorrect0",
+    });
+  } else if (!Vtelefono.test(telefono)) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      otext: "Telefono incorrecto",
+    });
+  }
+
+
+  else {
     Swal.fire({
       icon: "success",
       title: "Excelente",
@@ -114,14 +130,15 @@ function validar2() {
   const nombre2 = document.getElementById("nombre2").value;
   const cedula2 = document.getElementById("cedula2").value;
   const direccion2 = document.getElementById("direccion2").value;
+  const email2 = document.getElementById("email2").value
+  const telefono2 = document.getElementById("telefono2").value
 
   var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
   var Vcedula = /^[0-9]+$/; // Expresión regular para validar que la cédula solo contenga números
   var Vdireccion = /^[a-zA-Z0-9\s]+$/;
   //   var Vtelefono = /^\d+$/; // Expresión regular para validar que el teléfono solo contenga números
   var Vtelefono = /^\d{10}$/; // Expresión regular para validar que el teléfono solo contenga dígitos y tenga una longitud de 10
-  var email_val =
-    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var Vemail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
   if (nombre2 == "" || cedula2 == "" || direccion2 == "") {
     Swal.fire({
@@ -141,13 +158,31 @@ function validar2() {
       title: "Oops...",
       text: "Cédula incorrecta",
     });
-  } else if (!Vdireccion.test("direccion2")) {
+  } else if (!Vdireccion.test(direccion2)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
       text: "Direccion incorrecta",
     });
-  } else {
+  }
+
+  else if (!Vemail.test(email2)) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Teléfono incorrecto",
+    });
+  }
+  else if (!Vtelefono.test(telefono2)) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Teléfono incorrecto",
+    });
+  }
+
+
+  else {
     Swal.fire({
       icon: "success",
       title: "Excelente",
@@ -161,3 +196,13 @@ function validar2() {
     });
   }
 }
+
+
+
+function cancelar() {
+  // Cerrar el formulario aquí
+  document.getElementById('formulario').reset();
+  window.location.href = 'clientes.html';
+
+}
+

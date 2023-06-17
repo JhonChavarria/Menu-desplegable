@@ -102,6 +102,7 @@ function guardar(){
     let direccion = document.getElementById('direccion').value;
     let telefono = document.getElementById('telefono').value;
     let email = document.getElementById('email').value;
+    
     var regex = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
     var regex_num = /^[0-9]+$/;// Expresión regular para validar que la cédula solo contenga números
     var regex_direc = /^[a-zA-Z0-9]+\s[0-9]+-[0-9a-zA-Z]+$/;

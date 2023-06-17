@@ -159,33 +159,34 @@
                             </div>
                             <div class="modal-body">
                                 <div class="container">
+                                    <form action="">
+                                        <div class="nombreUsua">
+                                            <div class="input-box">
+                                                <span class="details">Nombre</span><br>
+                                                <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">Precio</span><br>
+                                                <input id="precio" type="text" placeholder="Ingrese el precio" required>
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">Cantidad</span><br>
+                                                <input id="cantidad" type="text" placeholder="Ingrese la cantidad"
+                                                    required>
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">Categoría</span><br>
+                                                <select id="categoria" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option value="1">Frenos</option>
+                                                    <option value="2">Llantas</option>
+                                                    <option value="2">Bujías</option>
+                                                </select>
+                                            </div>
 
-                                    <div class="nombreUsua">
-                                        <div class="input-box">
-                                            <span class="details">Nombre</span><br>
-                                            <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
                                         </div>
-                                        <div class="input-box">
-                                            <span class="details">Precio</span><br>
-                                            <input id="precio" type="text" placeholder="Ingrese el precio" required>
-                                        </div>
-                                        <div class="input-box">
-                                            <span class="details">Cantidad</span><br>
-                                            <input id="cantidad" type="text" placeholder="Ingrese la cantidad" required>
-                                        </div>
-                                        <div class="input-box">
-                                            <span class="details">Categoría</span><br>
-                                            <select id="categoria" class="form-select"
-                                                aria-label="Default select example">
-                                                <option value="1">Frenos</option>
-                                                <option value="2">Llantas</option>
-                                                <option value="2">Bujías</option>
-                                            </select>
-                                        </div>
-
-                                    </div>
-                                    <br>
-
+                                        <br>
+                                    </form>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -224,17 +225,19 @@
 
                             <td><a href="#" class="Editar" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="fa-solid fa-pen-to-square"></i></a>
-                                        
+
                                 <style>
                                     .Editar {
                                         text-decoration: none;
                                         color: #000;
                                     }
-                                    .buttonEstado{
+
+                                    .buttonEstado {
                                         color: green;
                                         cursor: pointer;
                                     }
-                                    #buttonEstado:active{
+
+                                    #buttonEstado:active {
                                         color: red;
                                     }
                                 </style>
@@ -250,36 +253,36 @@
                                             <div class="modal-body">
                                                 <div class="container">
 
-                                                    
 
-                                                        <div class="nombreUsua">
-                                                            <div class="input-box">
-                                                                <span class="details">Nombre</span><br>
-                                                                <input type="text" id="nombre2"
-                                                                    placeholder="Ingrese su nombre completo" required>
-                                                            </div>
-                                                            <div class="input-box">
-                                                                <span class="details">Precio</span><br>
-                                                                <input id="precio2" type="text"
-                                                                    placeholder="Ingrese el precio" required>
-                                                            </div>
-                                                            <div class="input-box">
-                                                                <span class="details">Cantidad</span><br>
-                                                                <input id="cantidad2" type="text"
-                                                                    placeholder="Ingrese la cantidad" required>
-                                                            </div>
-                                                            <div class="input-box">
-                                                                <span class="details">Categoría</span><br>
-                                                                <select id="categoria2" class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option value="1">Frenos</option>
-                                                                    <option value="2">Llantas</option>
-                                                                    <option value="2">Bujías</option>
-                                                                </select>
-                                                            </div>
+
+                                                    <div class="nombreUsua">
+                                                        <div class="input-box">
+                                                            <span class="details">Nombre</span><br>
+                                                            <input type="text" id="nombre2"
+                                                                placeholder="Ingrese su nombre completo" required>
                                                         </div>
-                                                        <br>
-                                                    
+                                                        <div class="input-box">
+                                                            <span class="details">Precio</span><br>
+                                                            <input id="precio2" type="text"
+                                                                placeholder="Ingrese el precio" required>
+                                                        </div>
+                                                        <div class="input-box">
+                                                            <span class="details">Cantidad</span><br>
+                                                            <input id="cantidad2" type="text"
+                                                                placeholder="Ingrese la cantidad" required>
+                                                        </div>
+                                                        <div class="input-box">
+                                                            <span class="details">Categoría</span><br>
+                                                            <select id="categoria2" class="form-select"
+                                                                aria-label="Default select example">
+                                                                <option value="1">Frenos</option>
+                                                                <option value="2">Llantas</option>
+                                                                <option value="2">Bujías</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -296,7 +299,7 @@
                             <!-- BOTON DE ESTADO -->
 
                             <td><i class="fa-solid fa-power-off buttonEstado"></i></td>
-                            
+
                             <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M7 6a7.75 7.75 0 1 0 10 0"></path>
