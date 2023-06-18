@@ -28,8 +28,8 @@ body {
 }
 
 .tr{
-    background-color: #99cecf;
-    color: black;
+    background-color: #000000;
+    color: white;
 }
 
 .h1{
@@ -86,7 +86,7 @@ section{
 }
 
 .bi-plus-circle-fill{
-    color: #88BDBF;
+    color: #000000;
 }
 
  /*Acomodar el input y botton de la busquedad*/
