@@ -18,13 +18,13 @@
 
     <script src="https://kit.fontawesome.com/51aee0fcba.js" crossorigin="anonymous"></script>
 
+    <script src="usuarios.js"></script>
+
 
 </head>
 
-<body>
-
+<body >
     <div id="content">
-
         <section>
             <br>
             <h1 class="h1">Usuarios</h1>
@@ -59,7 +59,7 @@
                         bottom: 0;
                         height: 3px;
                         width: 30px;
-                        background: linear-gradient(135deg, #88BDBF, #000);
+                        background: linear-gradient(135deg, #000000, #000);
 
                     }
 
@@ -97,12 +97,12 @@
                         width: 250px;
                         outline: none;
                         border-radius: 5px;
-                        border: 1px solid #ccc;
+                        border: 1px solid #636262;
                         padding-left: 15px;
                         font-size: 16px;
                         border-bottom-width: 2px;
                         transition: all 0.3s ease;
-                        border-color: #88BDBF;
+                        border-color: #000000;
                         margin-left: 45px;
 
 
@@ -114,9 +114,9 @@
                         } */
 
                     .form-select {
-                        border: 1px solid #ccc;
+                        border: 1px solid #636262;
                         border-bottom-width: 2px;
-                        border-color: #88BDBF;
+                        border-color: #000000;
                     }
 
                     .button {
@@ -186,9 +186,9 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark" onclick="">Agregar</button>
-                                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
-                                    onclick="">Cancelar</button>
+                                <button type="button" class="btn btn-outline-success" onclick="AgregarU()">Agregar</button>
+                                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"
+                                    onclick="cancelarU()">Cancelar</button>
                             </div>
                         </div>
                     </div>
@@ -238,22 +238,22 @@
                                                         <div class="nombreUsua">
                                                             <div class="input-box">
                                                                 <span class="details">Nombre</span><br>
-                                                                <input type="text" id="nombre"
+                                                                <input type="text" id="nombreUE"
                                                                     placeholder="Ingrese su nombre completo" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Email</span><br>
-                                                                <input id="email" type="text"
+                                                                <input id="emailUE" type="text"
                                                                     placeholder="Ingrese su email" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Contraseña</span><br>
-                                                                <input id="contrasena" type="password"
+                                                                <input id="contrasenaUE" type="password"
                                                                     placeholder="Ingrese su contraseña" required>
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Rol</span><br>
-                                                                <select id="rol" class="form-select"
+                                                                <select id="rolUE" class="form-select"
                                                                     aria-label="Default select example">
                                                                     <option selected>Seleccione un Rol</option>
                                                                     <option value="1">Administrador</option>
@@ -261,7 +261,7 @@
                                                             </div>
                                                             <div class="input-box">
                                                                 <span class="details">Confirmar contraseña</span><br>
-                                                                <input id="confirmar" type="password"
+                                                                <input id="confirmarUE" type="password"
                                                                     placeholder="Confirmar su contraseña" required>
                                                             </div>
 
@@ -273,9 +273,9 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-outline-dark"
-                                                    onclick="">Guardar</button>
+                                                    onclick="GuardarU()">Guardar</button>
                                                 <button type="button" class="btn btn-outline-dark"
-                                                    data-bs-dismiss="modal" onclick="">Cancelar</button>
+                                                    data-bs-dismiss="modal" onclick="cancelarU()">Cancelar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -333,6 +333,7 @@
         </section>
     </div>
     <script src="estadoColor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

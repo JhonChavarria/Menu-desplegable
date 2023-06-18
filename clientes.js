@@ -1,4 +1,3 @@
-// funcion que nos ayudara a validar los datos
 function swalAlert(icon,title,text){
   Swal.fire({
     icon: icon,
@@ -6,6 +5,8 @@ function swalAlert(icon,title,text){
     text: text
   })
 }
+
+// funcion que nos ayudara a validar los datos
 async function Agregar(){ 
     let nombre = document.getElementById('nombre').value;
     let cedula = document.getElementById('cedula').value;
