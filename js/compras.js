@@ -49,7 +49,7 @@ async function crearCompra () {
 
     console.log(data);
 
-    const url = 'http://localhost:9000/api/compras/12';
+    const url = 'http://localhost:9000/api/compras/';
 
     const response = await fetch(url, {
         method: "POST", // DELETE // PUT // POST
