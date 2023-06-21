@@ -68,13 +68,12 @@ function validar1() {
   const telefono = document.getElementById("telefono").value
 
 
-  var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
+  var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ][A-Za-zÁáÉéÍíÓóÚúÑñ\s]*$/; // Expresión regular para validar solo letras y espacios
   var Vcedula = /^[0-9]+$/; // Expresión regular para validar que la cédula solo contenga números
-  var Vdireccion = /^[a-zA-Z0-9\s]+$/;
+  // var Vdireccion = /^[a-zA-Z0-9\s]+$/;
+  var regex_direc = /^[a-zA-Z]+(\s*)?[0-9a-zA-Z\s]*#[a-zA-Z0-9]+-[a-zA-Z0-9]+$/;
   //   var Vtelefono = /^\d+$/; // Expresión regular para validar que el teléfono solo contenga números
-  var Vtelefono = /^\d{10}$/; // Expresión regular para validar que el teléfono solo contenga dígitos y tenga una longitud de 10
-  var Vemail =
-    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var Vemail =/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
   if (nombre == "" || cedula == "" || direccion == "") {
     Swal.fire({
@@ -94,7 +93,21 @@ function validar1() {
       title: "Oops...",
       text: "Cédula incorrecta",
     });
-  } else if (!Vdireccion.test(direccion)) {
+  }else if ( document.getElementById("cedula").value.length < 7 ){//para validar la longitud de la cedula
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Cédula incorrecta. Minimo 7 caracteres",
+    });
+
+  }else if ( document.getElementById("cedula").value.length > 10){
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Cédula incorrecta, Maximo 10 caracteres",
+    });
+
+  } else if (!regex_direc.test(direccion)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -113,6 +126,20 @@ function validar1() {
       title: "Oops...",
       otext: "Telefono incorrecto",
     });
+  }else if ( document.getElementById("telefono").value.length < 7 ){//para validar la longitud de la telefono
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Telefono incorrecta. Minimo 7 caracteres",
+    });
+
+  }else if ( document.getElementById("telefono").value.length > 10){
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Telefono incorrecta, Maximo 10 caracteres",
+    });
+
   }
 
 

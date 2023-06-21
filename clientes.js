@@ -33,10 +33,12 @@ async function Agregar(){
         swalAlert('error','Oops...','ingresar solo numeros en el campo de la cedula')
         
   
-  }else if (!regex_digi.test(cedula)) {
-    
-        swalAlert('error','Oops...','Por favor, ingresar solo 10 digitos en el campo cedula')
-     
+  }else if ( document.getElementById("cedula").value.length < 7 ){//para validar la longitud de la cedula
+    swalAlert('error','Oops...','Cedula Incorrecta. Minimo 7 caracteres')
+
+  }else if ( document.getElementById("cedula").value.length > 10){
+    swalAlert('error','Oops...','Cedula Incorrecta. Maximo 10 caracteres')
+
   }else if (!regex_direc.test(direccion)) {
       // Comprueba si la dirección cumple con el formato especificado
         swalAlert('error','Oops...','ingresar solo numeros, letras, un solo numeral y un solo guion. Ejem: Calle 123-A')
@@ -49,9 +51,11 @@ async function Agregar(){
     
         swalAlert('error','Oops...','ingresar solo numero en el campo telefono')
 
-  }else if (!regex_digi.test(telefono)) {
-    
-        swalAlert('error','Oops...','ingresar solo 10 digitos en el campo telefono')
+  }else if ( document.getElementById("telefono").value.length < 7 ){//para validar la longitud de la telefono
+    swalAlert('error','Oops...','Telefono Incorrecta. Minimo 7 caracteres')
+
+  }else if ( document.getElementById("telefono").value.length > 10){
+    swalAlert('error','Oops...','Telefono Incorrecta. Maximo 10 caracteres')
 
   }else{
     
@@ -63,11 +67,11 @@ async function Agregar(){
   }
  }
 function guardar(){
-    let nombre = document.getElementById('nombre').value;
-    let cedula = document.getElementById('cedula').value;
-    let direccion = document.getElementById('direccion').value;
-    let telefono = document.getElementById('telefono').value;
-    let email = document.getElementById('email').value;
+    let nombre = document.getElementById('nombreE').value;
+    let cedula = document.getElementById('cedulaE').value;
+    let direccion = document.getElementById('direccionE').value;
+    let telefono = document.getElementById('telefonoE').value;
+    let email = document.getElementById('emailE').value;
     var regex = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
     var regex_num = /^[0-9]+$/;// Expresión regular para validar que la cédula solo contenga números
     var regex_direc = /^[a-zA-Z0-9]+\s[0-9]+-[0-9a-zA-Z]+$/;
@@ -88,62 +92,38 @@ function guardar(){
 
 } else if (!regex.test(nombre)) {
       // Si el nombre está vacío o no cumple con el patrón de letras, mostrar un mensaje de error
-      Swal.fire({
-        icon: 'error nombre',
-        title: 'Oops...',
-        text: 'Por favor, ingresa un nombre válido.'
-      })
+      swalAlert('error','Oops...','Por favor, ingresa un nombre válido.')
       // alert("Por favor, ingresa un nombre válido.");
 
   }else if (!regex_num.test(cedula)) {
       // Comprueba si la cédula cumple con el formato numérico
-      Swal.fire({
-        icon: 'error cedula',
-        title: 'Oops...',
-        text: 'Por favor, ingresar solo numeros en el campo de la cedula'
-      })
+      swalAlert('error','Oops...','ingresar solo numeros en el campo de la cedula')
       //alert("Por favor, ingresar solo numeros en el campo de la cedula");
 
-  }else if (!regex_digi.test(cedula)) {
-    Swal.fire({
-      icon: 'error cedula',
-      title: 'Oops...',
-      text: 'Por favor, ingresar solo 10 digitos en el campo cedula'
-    })
-    // alert("Por favor, ingresar solo 10 digitos en el campo cedula");
+  }else if ( document.getElementById("cedulaE").value.length < 7 ){//para validar la longitud de la cedula
+    swalAlert('error','Oops...','Cedula Incorrecta. Minimo 7 caracteres')
 
+  }else if ( document.getElementById("cedulaE").value.length > 10){
+    swalAlert('error','Oops...','Cedula Incorrecta. Maximo 10 caracteres')
+    
   }else if (!regex_direc.test(direccion)) {
     // Comprueba si la dirección cumple con el formato especificado
-    Swal.fire({
-      icon: 'error dirección',
-      title: 'Oops...',
-      text: 'Por favor, ingresar solo numeros, letras, un solo numeral y un solo guion. Ejem: Calle 123-A'
-    });
+    swalAlert('error','Oops...','ingresar solo numeros, letras, un solo numeral y un solo guion. Ejem: Calle 123-A')
     // alert("Por favor, ingresar solo numeros, letras, un solo numeral y un solo guion. Ejem: Calle 123-A");
 
   }else if(!email_val.test(email)){ //validar por si no es correo
-    Swal.fire({
-      icon: 'error dirección',
-      title: 'Oops...',
-      text: 'Ingrese el formato de email correcto'
-    });
+    swalAlert('error','Oops...','Ingrese el formato de email correcto')
     //alert("Ingrese el formato de email correcto");
 
   }else if (!regex_tele.test(telefono)) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Por favor, ingresar solo numero en el campo telefono'
-    });
+    swalAlert('error','Oops...','ingresar solo numero en el campo telefono')
     // alert("Por favor, ingresar solo numero en el campo telefono");
 
-  }else if (!regex_digi.test(telefono)) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Por favor, ingresar solo 10 digitos en el campo telefono'
-    });
-    //alert("Por favor, ingresar solo 10 digitos en el campo telefono ");
+  }else if ( document.getElementById("telefonoE").value.length < 7 ){//para validar la longitud de la telefono
+    swalAlert('error','Oops...','Telefono Incorrecta. Minimo 7 caracteres')
+
+  }else if ( document.getElementById("telefonoE").value.length > 10){
+    swalAlert('error','Oops...','Telefono Incorrecta. Maximo 10 caracteres')
 
   }else{
     Swal.fire({
