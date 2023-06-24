@@ -169,7 +169,7 @@
                                             </div>
                                             <div class="input-box">
                                                 <span class="details">Precio</span><br>
-                                                <input id="precio" type="number" placeholder="Ingrese el precio"
+                                                <input id="precio" type="text" placeholder="Ingrese el precio"
                                                     required>
                                             </div>
                                             <div class="input-box">
@@ -179,8 +179,9 @@
                                             </div>
                                             <div class="input-box">
                                                 <span class="details">Categoría</span><br>
-                                                <select id="categoria" class="form-select"
+                                                <select id="categoriaR" class="form-select"
                                                     aria-label="Default select example">
+                                                    <option selected>Seleccione una categoria</option>
                                                     <option value="1">Frenos</option>
                                                     <option value="2">Llantas</option>
                                                     <option value="2">Bujías</option>
@@ -245,6 +246,11 @@
                                     #buttonEstado:active {
                                         color: red;
                                     }
+
+                                    #IconoEstado {
+                                        color: green;
+                                        cursor: pointer;
+                                    }
                                 </style>
                                 <div class="modal fade" id="exampleModal2" tabindex="-1"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -263,36 +269,36 @@
                                                     <!-- FORMULARIO 2 -->
                                                     <form action="" id="formulario">
 
-                                                    <div class="nombreUsua">
-                                                        <div class="input-box">
-                                                            <span class="details">Nombre</span><br>
-                                                            <input type="text" id="nombre2"
-                                                                placeholder="Ingrese su nombre completo" required>
+                                                        <div class="nombreUsua">
+                                                            <div class="input-box">
+                                                                <span class="details">Nombre</span><br>
+                                                                <input type="text" id="nombre2"
+                                                                    placeholder="Ingrese su nombre completo" required>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Precio</span><br>
+                                                                <input id="precio2" type="text"
+                                                                    placeholder="Ingrese el precio" required>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Cantidad</span><br>
+                                                                <input id="cantidad2" type="text"
+                                                                    placeholder="Ingrese la cantidad" required>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Categoría</span><br>
+                                                                <select id="categoria2" class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option value="1">Frenos</option>
+                                                                    <option value="2">Llantas</option>
+                                                                    <option value="2">Bujías</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
-                                                        <div class="input-box">
-                                                            <span class="details">Precio</span><br>
-                                                            <input id="precio2" type="text"
-                                                                placeholder="Ingrese el precio" required>
-                                                        </div>
-                                                        <div class="input-box">
-                                                            <span class="details">Cantidad</span><br>
-                                                            <input id="cantidad2" type="text"
-                                                                placeholder="Ingrese la cantidad" required>
-                                                        </div>
-                                                        <div class="input-box">
-                                                            <span class="details">Categoría</span><br>
-                                                            <select id="categoria2" class="form-select"
-                                                                aria-label="Default select example">
-                                                                <option value="1">Frenos</option>
-                                                                <option value="2">Llantas</option>
-                                                                <option value="2">Bujías</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <br>
+                                                        <br>
 
-                                            <!--FIN DEL FORMULARIO-->
-                                                </form>
+                                                        <!--FIN DEL FORMULARIO-->
+                                                    </form>
 
 
                                                 </div>
@@ -303,14 +309,14 @@
                                                 <button type="button" class="btn btn-outline-dark"
                                                     data-bs-dismiss="modal" onclick="cancelar()">Cancelar</button>
                                             </div>
-                                        
+
+                                        </div>
                                     </div>
-                                </div>
                             </td>
 
                             <!-- BOTON DE ESTADO -->
 
-                            <td><i class="fa-solid fa-power-off buttonEstado"></i></td>
+                            <td><i class="fa-solid fa-power-off buttonEstado" id="IconoEstado"></i></td>
 
                             <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -356,7 +362,7 @@
 
         </section>
     </div>
-
+    <script src="estadoColor.js"></script>
     <script src="validarRepuestos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

@@ -1,24 +1,45 @@
 .container {
-    max-width: 700px;
     width: 100%;
     padding: 25px 30px;
-    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .container .title {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 500;
     position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.container .title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background: linear-gradient(135deg, #88BDBF, #000);
+.container .search {
+    width: 70%;
+}
+
+.container .search div {
+    display: inline-block;
+    width: 69%;
+}
+
+.container .search div:first-child {
+    width: 30%;
+}
+
+.container .search a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.container .me-2 {
+    width: 50%;
+}
+
+.bi-plus-circle-fill {
+    color: #000000;
 }
 
 .container form .nombreUsua {
@@ -31,6 +52,7 @@
 form .nombreUsua .input-box {
     margin-bottom: 15px;
     width: calc(100% / 3=20px);
+
 }
 
 
@@ -38,6 +60,7 @@ form .nombreUsua .input-box {
 .nombreUsua .input-box .form-select {
     height: 40px;
     width: 245px;
+
 }
 
 .nombreUsua .input-box .details {
@@ -58,6 +81,8 @@ form .nombreUsua .input-box {
     transition: all 0.3s ease;
     border-color: #88BDBF;
     margin-left: 45px;
+
+
 }
 
 /* .nombreUsua .input-box input:focus,
@@ -87,10 +112,4 @@ form .nombreUsua .input-box {
 #estado{
     
     margin-left: 45px;
-}
-
-
-.Editar {
-    text-decoration: none;
-    color: #000;
 }

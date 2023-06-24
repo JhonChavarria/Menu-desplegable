@@ -139,3 +139,9 @@ function AgregarU(){
         }
     }
     
+    function cancelarU(){
+        // Cerrar el formulario aquí
+              document.getElementById('formularioU').reset();
+              window.location.href = 'usuarios.html';
+            
+        }

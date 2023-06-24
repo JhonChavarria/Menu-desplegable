@@ -89,10 +89,12 @@ function validar1() {
   const nombre = document.getElementById("nombre").value;
   const precio = document.getElementById("precio").value;
   const cantidad = document.getElementById("cantidad").value;
+  const categoria= document.getElementById("categoriaR").value;
 
 
 
-  var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/; // Expresión regular para validar solo letras y espacios
+  var Vnombre = /^[A-Za-zÁáÉéÍíÓóÚúÑñ][A-Za-zÁáÉéÍíÓóÚúÑñ\s]*$/; // Expresión regular para validar solo letras y espacios
+  var regex_num = /^[0-9]+$/;
   // var Vprecio = /($[0-9,]+(.[0-9]{2})?)/ // Expresión regular para validar precio
 
   if (nombre == "" || precio == "" || cantidad == "" ) {
@@ -107,11 +109,23 @@ function validar1() {
       title: "Oops...",
       text: "Nombre incorrecto",
     });
-  } else if (!Vprecio.test(precio)) {
+  } else if (!regex_num.test(precio)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Precio incorrecto",
+      text: "Precio incorrecto, Ingrese solo numeros",
+    });
+  }else if (!regex_num.test(cantidad)) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Cantidad incorrecto, Ingrese solo numeros",
+    });
+  }else if(categoria == "Seleccione una categoria"){ //para validar que la categoria no este vacio
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Por favor, Seleccione una categoria",
     });
   } else {
     Swal.fire({

@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compras</title>
     <link rel="stylesheet" href="css/usuarios.css">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
@@ -38,6 +41,111 @@
                     </div>
                 </div>
                 <!-- MODAL AGREGAR REPUESTO -->
+                <div class="div2"><a href="#" class="agregar" data-bs-toggle="modal" data-bs-target="#exampleModal"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                        </svg> Agregar</a></div>
+                <style>
+                    .container {
+                        max-width: 700px;
+                        width: 100%;
+                        padding: 25px 30px;
+                        border-radius: 5px;
+
+                    }
+
+                    .container .title {
+                        font-size: 25px;
+                        font-weight: 500;
+                        position: relative;
+                    }
+
+                    .container .title::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 3px;
+                        width: 30px;
+                        background: linear-gradient(135deg, #88BDBF, #000);
+
+                    }
+
+                    .container form .nombreUsua {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin: 20px 50px 20px 0px;
+                    }
+
+                    form .nombreUsua .input-box {
+                        margin-bottom: 15px;
+                        width: calc(100% / 3=20px);
+
+                    }
+
+
+
+                    .nombreUsua .input-box .form-select {
+                        height: 40px;
+                        width: 245px;
+
+                    }
+
+                    .nombreUsua .input-box .details {
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                        margin-left: 40px;
+                    }
+
+                    .nombreUsua .input-box input {
+                        height: 40px;
+                        width: 250px;
+                        outline: none;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        padding-left: 15px;
+                        font-size: 16px;
+                        border-bottom-width: 2px;
+                        transition: all 0.3s ease;
+                        border-color: #88BDBF;
+                        margin-left: 45px;
+
+
+                    }
+
+                    /* .nombreUsua .input-box input:focus,
+                        .nombreUsua .input-box input:valid{
+                            border-color: #88BDBF;
+                        } */
+
+                    .form-select {
+                        border: 1px solid #ccc;
+                        border-bottom-width: 2px;
+                        border-color: #88BDBF;
+                    }
+
+                    .button {
+                        margin-left: -90px;
+                    }
+
+                    .btn-outline-dark {
+                        margin-left: 20px;
+
+                    }
+
+                    .modar-header {
+                        align-items: center;
+                    }
+
+                    #estado{
+                        
+                        margin-left: 45px;
+                    }
+                </style>
+
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -71,7 +179,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark" onclick="crearCompra();">Guardar</button>
+                                <button type="button" class="btn btn-outline-dark" onclick="">Agregar</button>
                                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
                                     onclick="">Cancelar</button>
                             </div>
@@ -87,40 +195,95 @@
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody id="list-compras"></tbody>
-                    <!-- MODAL EDITAR -->
-                    <div class="modal fade" id="exampleModal2" tabindex="-1"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Cliente</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form action="#">
-                                            <div class="d-flex flex-wrap">
-                                                <div class="input-box" style="width: 24%;">
-                                                    <span class="details">cod producto</span><br>
-                                                    <input type="text" id="cod_prod_edit" placeholder="cod producto" disabled>
-                                                </div>
-                                                <div class="input-box" style="width: 24%;"> 
-                                                    <span class="details">Precio</span><br>
-                                                    <input id="precio_edit" type="number" placeholder="Ingrese precio">
+                    <tbody id="user-list">
+                        <tr>
+                            <td>01</td>
+                            <td>Frenos yamaha</td>
+                            <td>15000</td>
+                            <td>7</td>
+
+                            <td>Frenos</td>
+
+
+                            <td><a href="#" class="Editar" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>
+                                <style>
+                                    .Editar {
+                                        text-decoration: none;
+                                        color: #000;
+                                    }
+                                </style>
+                                <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Cliente</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <form action="#">
+                                                        <div class="nombreUsua">
+                                                            <div class="input-box">
+                                                                <span class="details">Nombre</span><br>
+                                                                <input type="text" id="nombre"
+                                                                    placeholder="Ingrese su nombre completo" required>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Cedula</span><br>
+                                                                <input id="cedula" type="number"
+                                                                    placeholder="Ingrese su cedula" required>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Dirección</span><br>
+                                                                <input id="Dirección" type="text"
+                                                                    placeholder="Ingrese su direcciñon" required>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Email</span><br>
+                                                                <input id="email" type="text"
+                                                                    placeholder="Ingrese su email" required>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <span class="details">Telefono</span><br>
+                                                                <input id="telefono" type="number"
+                                                                    placeholder="Ingresa tu numero de telefono"
+                                                                    required>
+                                                            </div>
+
+
+                                                        </div>
+                                                        <br>
+                                                    </form>
                                                 </div>
                                             </div>
-                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-dark"
+                                                    onclick="">Guardar</button>
+                                                <button type="button" class="btn btn-outline-dark"
+                                                    data-bs-dismiss="modal" onclick="">Cancelar</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-dark" onclick="editarInfo()">Guardar</button>
-                                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                            <td><i class="fa-solid fa-power-off"></i></td>
+                            <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 6a7.75 7.75 0 1 0 10 0"></path>
+                        <path d="M12 4l0 8"></path>
+                     </svg></i></td> -->
+                            <!-- <td> 
+                        <a href="#" class="btn btn-danger btn-sm delete" onclick="clearFields()">Delete</a>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
+                    </td>
+                    
+                    </tr> -->
+                    </tbody>
                 </table>
             </div>
             <nav class="pagination" aria-label="Page navigation example">
