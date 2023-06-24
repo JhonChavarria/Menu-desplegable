@@ -151,6 +151,11 @@
                                     <form id="formulario" action="#">
                                         <div class="nombreUsua">
                                             <div class="input-box">
+                                                <span class="details">Id</span><br>
+                                                <input type="text" id="id"
+                                                    placeholder="Ingrese Id del cliente" required>
+                                            </div>
+                                            <div class="input-box">
                                                 <span class="details">Nombre</span><br>
                                                 <input type="text" id="nombre" placeholder="Ingrese su nombre completo"
                                                     required>
@@ -182,7 +187,7 @@
                             </div>
                             <div class="modal-footer">
                                 <input type="submit" value="Agregar" class="btn btn-outline-success"
-                                    onclick="Agregar() " />
+                                    onclick="crearCliente()" />
                                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"
                                     onclick="cancelar()">Cancelar</button>
                             </div>
@@ -201,26 +206,13 @@
                             <th scope="col">Email</th>
                             <th scope="col">Dirección</th>
                             <th scope="col">Telefono</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Estado</th>
+                            <th scope="col">Acciones</th>
+                            
                         </tr>
                     </thead>
-                    <tbody id="user-list">
-                        <tr>
-                            <td>01</td>
-                            <td>sara Arias</td>
-                            <td>1000234576</td>
-                            <td>Saritalop@gmail.com</td>
-                            <td>Cr34 #43-54</td>
-                            <td>3148732945</td>
-                            <td><a href="#" class="Editar" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
-                                        class="fa-solid fa-pen-to-square"></i></a>
-                                <style>
-                                    .Editar {
-                                        text-decoration: none;
-                                        color: #000;
-                                    }
-                                </style>
+                    <tbody id="user-list"></tbody>
+                        <!-- MODAL EDITAR -->
+                                
                                 <div class="modal fade" id="exampleModal2" tabindex="-1"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
@@ -232,8 +224,13 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container">
-                                                    <form action="#">
+                                                    <form action="">
                                                         <div class="nombreUsua">
+                                                            <div class="input-box">
+                                                                <span class="details">Id</span><br>
+                                                                <input type="text" id="idE"
+                                                                    placeholder="Ingrese Id del cliente" required>
+                                                            </div>
                                                             <div class="input-box">
                                                                 <span class="details">Nombre</span><br>
                                                                 <input type="text" id="nombreE"
@@ -276,38 +273,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-
-
-                            <!-- ICONO DE ESTADO -->
-                            <td><i class="fa-solid fa-power-off"></i></td>
-
-
-
-                            <!-- <td><i onclick="toggleFunctionality()"><svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M7 6a7.75 7.75 0 1 0 10 0"></path>
-                        <path d="M12 4l0 8"></path>
-                     </svg></i></td> -->
-                            <!-- <td> 
-                        <a href="#" class="btn btn-danger btn-sm delete" onclick="clearFields()">Delete</a>
-                    </td>
-                    <td>
-                        <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
-                    </td>
-                    
-                    </tr> -->
-                    </tbody>
+                                </div>   
                 </table>
 
             </div>
-            <div class="search">
+            <!-- <div class="search">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Buscar</button>
                 </form>
-            </div>
+            </div> -->
 
             <nav class="pagination" aria-label="Page navigation example">
                 <ul class="pagination">

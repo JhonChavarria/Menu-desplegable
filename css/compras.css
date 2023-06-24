@@ -1,0 +1,96 @@
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #88BDBF, #000);
+}
+
+.container form .nombreUsua {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 50px 20px 0px;
+}
+
+form .nombreUsua .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 3=20px);
+}
+
+
+
+.nombreUsua .input-box .form-select {
+    height: 40px;
+    width: 245px;
+}
+
+.nombreUsua .input-box .details {
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.nombreUsua .input-box input {
+    height: 40px;
+    width: 250px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    border-color: #88BDBF;
+    margin-left: 45px;
+}
+
+/* .nombreUsua .input-box input:focus,
+    .nombreUsua .input-box input:valid{
+        border-color: #88BDBF;
+    } */
+
+.form-select {
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    border-color: #88BDBF;
+}
+
+.button {
+    margin-left: -90px;
+}
+
+.btn-outline-dark {
+    margin-left: 20px;
+
+}
+
+.modar-header {
+    align-items: center;
+}
+
+#estado{
+    
+    margin-left: 45px;
+}
+
+
+.Editar {
+    text-decoration: none;
+    color: #000;
+}
